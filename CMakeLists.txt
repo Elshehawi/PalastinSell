@@ -5,4 +5,5 @@ set(CMAKE_C_STANDARD 17)
 
 add_executable(PalastinShell main.c
         input_paraser.c
-        helpers.c)
+        helpers.c
+        builtins.c)

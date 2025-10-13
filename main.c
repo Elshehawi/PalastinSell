@@ -9,21 +9,23 @@
 // Manage Path
 // Error Handling
 
-// cd, pwd, echo, env, setenv, unsetenv, which, exit
+// Builtin: cd, pwd, echo, env, setenv, unsetenv, which, exit
+// Binary execution: ls, grep, cat, etc.
+
 int shell_builts(char** args, char** env, char* initial_directory)
 {
-    (void) env;
-    (void) initial_directory;
+    // (void) env;
+    // (void) initial_directory;
     // printf("Arg[0]: %s", args[0]);
     // printf("\n");
     if (my_strcmp(args[0], "cd") == 0) {
-        // return command_cd(args, initial_directory);
+        return command_cd(args, initial_directory);
     } else if (my_strcmp(args[0], "pwd") == 0) {
-        // command_pwd();
+        command_pwd();
     } else if (my_strcmp(args[0], "echo") == 0) {
-        // command_echo(args, env);
+        command_echo(args, env);
     } else if (my_strcmp(args[0], "env") == 0) {
-        // command_env(env);
+        command_env(env);
     } else if (my_strcmp(args[0], "which") == 0) {
         // command_which(args, env);
     } else if (my_strcmp(args[0], "exit") == 0 || my_strcmp(args[0], "quit") == 0) {
@@ -60,7 +62,6 @@ void shell_loop(char** env)
         // for (size_t i = 0; args[i]; i++)
         // {
         //     printf("Args: %s", args[i]);
-        //     printf("\n");
         // }
 
         if (args[0])
