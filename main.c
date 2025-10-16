@@ -21,13 +21,13 @@ int shell_builts(char** args, char** env, char* initial_directory)
     if (my_strcmp(args[0], "cd") == 0) {
         return command_cd(args, initial_directory);
     } else if (my_strcmp(args[0], "pwd") == 0) {
-        command_pwd();
+        return command_pwd();
     } else if (my_strcmp(args[0], "echo") == 0) {
-        command_echo(args, env);
+        return command_echo(args, env);
     } else if (my_strcmp(args[0], "env") == 0) {
-        command_env(env);
+        return command_env(env);
     } else if (my_strcmp(args[0], "which") == 0) {
-        // command_which(args, env);
+        return command_which(args, env);
     } else if (my_strcmp(args[0], "exit") == 0 || my_strcmp(args[0], "quit") == 0) {
         exit(EXIT_SUCCESS);
     } else {
