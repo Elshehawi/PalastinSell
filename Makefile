@@ -1,5 +1,5 @@
 TARGET = palestine_shell
-OBJ = main.c input_paraser.c helpers.c builtins.c
+OBJ = main.c input_paraser.c helpers.c builtins.c executor.c
 CFLAGS = -Wall -Wextra -Werror
 CC = gcc
 
