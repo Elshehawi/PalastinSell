@@ -1,10 +1,10 @@
-# PalastinSell
+# PalestineSell
 
 A minimal custom shell implementation written in C for educational and learning purposes.
 
 ## 🌟 Project Overview
 
-PalastinSell is a basic Unix-style command-line shell built to teach core operating system and systems programming concepts, including:
+PalestineSell is a basic Unix-style command-line shell built to teach core operating system and systems programming concepts, including:
 - Parsing user input and tokenizing commands  
 - Handling built-in commands (`cd`, `pwd`, `echo`, `env`, `setenv`, `unsetenv`, `which`, `exit`)  
 - Launching external programs via `fork()` + `exec()` and managing their lifecycle  
@@ -37,6 +37,6 @@ PalastinSell is a basic Unix-style command-line shell built to teach core operat
 
 ### Building
 ```bash
-git clone https://github.com/Elshehawi/PalastinSell.git
+git clone https://github.com/Elshehawi/PalestineSell.git
 cd PalastinSell
 gcc -Wall -Wextra -Werror -g -o shell palestine_shell.c parser.c builtins.c utils.c
