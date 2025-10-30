@@ -12,7 +12,7 @@ int my_strcmp(const char* str1, const char* str2)
         str2++;
     }
 
-    return *(unsigned char*)str1 - *(unsigned char*)str2;    
+    return *(unsigned char*)str1 - *(unsigned char*)str2;
 }
 
 int my_strlen(const char* str)
@@ -46,10 +46,11 @@ int my_strncmp(const char* str1, const char* str2, size_t n)
     if (i == n) {
         return 0;
     }
-    
+
     return (unsigned char)str1[i] - (unsigned char)str2[i];
 }
 
+//
 char* my_getenv(const char *name, char**env)
 {
     if (name == NULL || env == NULL) {
