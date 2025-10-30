@@ -29,8 +29,8 @@ int shell_builts(char** args, char** env, char* initial_directory)
     } else if (my_strcmp(args[0], "exit") == 0 || my_strcmp(args[0], "quit") == 0) {
         exit(EXIT_SUCCESS);
     } else {
-        // Not a builtin command
-        // executor();
+        // Not a builtin command, execute as external command
+        return executor(args, env);
     }
     return 0;
 }

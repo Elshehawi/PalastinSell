@@ -1,5 +1,4 @@
 #include "palestine_shell.h"
-
 // 0: The strings are equal
 // < 0: str1 < str2
 // > 0: str1 > str2
@@ -15,6 +14,7 @@ int my_strcmp(const char* str1, const char* str2)
     return *(unsigned char*)str1 - *(unsigned char*)str2;
 }
 
+// Length of the strting
 int my_strlen(const char* str)
 {
     if (str == NULL) return -1;
@@ -50,7 +50,7 @@ int my_strncmp(const char* str1, const char* str2, size_t n)
     return (unsigned char)str1[i] - (unsigned char)str2[i];
 }
 
-//
+// Searches the environment variables for the specified name and returns its value.
 char* my_getenv(const char *name, char**env)
 {
     if (name == NULL || env == NULL) {
@@ -69,6 +69,7 @@ char* my_getenv(const char *name, char**env)
     return NULL;
 }
 
+// Creates a duplicate of the input string by allocating new memory.
 char* my_strdup(const char* str)
 {
     if (str == NULL) return NULL;
@@ -84,6 +85,7 @@ char* my_strdup(const char* str)
     return duplicated;
 }
 
+// Copies the content of the source string into the destination string.
 char* my_strcpy(char* dest, const char* src)
 {
     if (src == NULL) return NULL;
@@ -94,9 +96,10 @@ char* my_strcpy(char* dest, const char* src)
         src++;
     }
     *dest = '\0';
-    return ret;    
+    return ret;
 }
 
+// Locates the first occurrence of a character in a string.
 char* my_strchr(const char* str, char c)
 {
     while(*str) {
@@ -108,6 +111,7 @@ char* my_strchr(const char* str, char c)
     return NULL;
 }
 
+// Tokenizes a string by splitting it based on a set of delimiter characters.
 char* my_strtok(char* input_string, const char* delimiter)
 {
     static char* next_token = NULL;
@@ -142,5 +146,20 @@ char* my_strtok(char* input_string, const char* delimiter)
         next_token = NULL;
     }
 
-    return token; 
+    return token;
+}
+
+// Copies up to n characters from the source string to the destination string, ensuring null-termination.
+char* my_strncpy(char* dest, const char* src, size_t n) {
+    size_t i;
+
+    for (i = 0; i < n && src[i] != '\0'; i++) {
+        dest[i] = src[i];
+    }
+
+    for (; i < n; i++) {
+        dest[i] = '\0';
+    }
+
+    return dest;
 }
